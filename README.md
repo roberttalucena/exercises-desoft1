@@ -28,7 +28,7 @@ $ code .
 
 # Configure tsconfig.json file
 
-```json
+```js
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
