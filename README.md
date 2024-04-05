@@ -28,7 +28,7 @@ $ code .
 
 # Configure tsconfig.json file
 Update the tsconfig.json file.
-At the end, your tsconfig.json file must be equal to the following text.. 
+At the end, your tsconfig.json file must be equal to the following text:
 ```js
 {
   "compilerOptions": {
@@ -143,59 +143,108 @@ At the end, your tsconfig.json file must be equal to the following text..
 
 ```
 
-Using a continual approach
+# Install Unit Testing for TypeScript
 
 ```shell
-$ npm run test-watch
+$ npm i jest ts-jest @types/jest --save-dev
 ```
 
-# Mutation Testing for TypeScript
-
-The installation steps are not required for this project. You can skip to the Run Stryker section.
-
-# Configuring Mutation testing with Stryker
-
-Either install stryker globally
+# Install Unit Testing Reporters for TypeScript
 
 ```shell
-$ npm install -g stryker-cli
+$ npm i jest-html-reporter jest-html-reporters --save-dev
+```
+# Configure package.json file
+Update the package.json file.
+At the end, excpeting  `name` attribute , your package.json file must be equal to the following text: 
+```js
+{
+  "name": "switch-qa-classroom-exercises-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --coverageReporters=\"text\" --coverageReporters=\"html\" --coverageReporters=\"json\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.4",
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "jest-html-reporters": "^3.1.7",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover"
+    ],
+    "coverageDirectory": "coverage",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "publicPath": "./reports",
+          "filename": "report.html",
+          "expand": true
+        }
+      ]
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
+
 ```
 
-or locally:
+# How to compile the Typescript code?
 
 ```shell
-$ npm install --save-dev @stryker-mutator/core
-$ npm install --save-dev @stryker-mutator/jest-runner
-$ npm install --save-dev @stryker-mutator/typescript-checker
+$ tsc --build
 ```
-
-## Configure Stryker
-
-If you want to configure Stryker, run the following command:
+# How to run the `index.js`code ?
 
 ```shell
-$ stryker init
+$ node dist
 ```
 
-Otherwise, look at the configuration file already provided on this project stryker.conf.json
-
-## Git Ignore Stryker folder
-
-Stryker also changes the .gitignore file to ignore the stryker folder: .stryker-tmp
-
-## Run Stryker Mutation when globally installed 
+# How to run the code for a specific file?
 
 ```shell
-$ stryker run
+$ node dist/<file>.js
 ```
 
-## Run Stryker when locally installed 
+# How to run Jest Tests?
 
 ```shell
-$ npx stryker run
+$ npm run test
 ```
 
-
-# Who do I talk to about this repository?
-
-Nuno Bettencourt
