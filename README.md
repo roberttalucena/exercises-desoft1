@@ -3,7 +3,7 @@
 
 Look at the docs folder for the documentation.
 
-# Setup Node.js package.json
+# Create the package.json file
 
 ```shell
 $ npm init -y
