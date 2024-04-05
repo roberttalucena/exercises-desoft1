@@ -27,7 +27,8 @@ $ code .
 ```
 
 # Configure tsconfig.json file
-
+Update the tsconfig.json file.
+At the end, your tsconfig.json file must be equal to the following text.. 
 ```js
 {
   "compilerOptions": {
