@@ -159,7 +159,7 @@ Update the package.json file.
 At the end, excepting  the `name` attribut , your `package.json` file must be equal to the following text: 
 ```js
 {
-  "name": "switch-qa-classroom-exercises-base",
+  "name": "switch-qa-classroom-exercises-base-XXX",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
