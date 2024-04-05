@@ -28,7 +28,7 @@ $ code .
 
 # Configure tsconfig.json file
 Update the tsconfig.json file.
-At the end, your tsconfig.json file must be equal to the following text:
+At the end, your `tsconfig.json` file must be equal to the following text:
 ```js
 {
   "compilerOptions": {
@@ -156,7 +156,7 @@ $ npm i jest-html-reporter jest-html-reporters --save-dev
 ```
 # Configure package.json file
 Update the package.json file.
-At the end, excpeting  `name` attribute , your package.json file must be equal to the following text: 
+At the end, excepting  the `name` attribut , your `package.json` file must be equal to the following text: 
 ```js
 {
   "name": "switch-qa-classroom-exercises-base",
