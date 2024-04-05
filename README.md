@@ -1,5 +1,5 @@
 
-# DESOFT I - Lab Classes Support Project
+# DESOFT I - Lab Classes Exercises (Project)
 
 Look at the docs folder for the documentation.
 
