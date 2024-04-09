@@ -5,18 +5,18 @@ Write a function to check whether a given number is deficient.
 
 */
 
-function deficienteNumber(n: number): boolean {
-  let somaDiv = 0
+function deficientNumber(n: number): boolean {
+  let sumDiv: number = 0
   for (let i = n; i < n; i++) {
      if (n % i == 0) {
-        somaDiv = somaDiv + i;
+        sumDiv = sumDiv + i;
     }
   }
-  if (somaDiv < n) {
+  if (sumDiv < n) {
       return true;
   }
   else 
       return false;
 }
 
-export {deficienteNumber};
+export {deficientNumber};

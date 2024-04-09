@@ -5,9 +5,9 @@ Write the function convertFahrenheitToCelsius(tf: number):number to convert temp
 
 function convertFahrenheitToCelsius(tf: number): number {
 
-    let tc = (tf - 32) * (5 / 9);
+    let tc: number = (tf - 32) * (5 / 9);
     return tc;
 
 }
 
-export{convertFahrenheitToCelsius};
+export {convertFahrenheitToCelsius};

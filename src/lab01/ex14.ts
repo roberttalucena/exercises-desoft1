@@ -6,13 +6,13 @@ Examples, the first perfect number is 6. Its proper divisors are 1, 2, and 3,and
 */
 
 function perfectNumber(n: number): boolean {
-  let somaDiv = 0;
+  let sumDiv: number = 0;
   for (let i = 1; i < n; i = i + 1) {
       if (n % i == 0) {
-        somaDiv = somaDiv + 1;
+        sumDiv = sumDiv + 1;
       }
   }
-  if (somaDiv == n) {
+  if (sumDiv == n) {
       return true;
   }
   else {

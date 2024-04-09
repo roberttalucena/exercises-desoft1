@@ -6,8 +6,8 @@ Write the function calculateCircleArea(radius: number):number to calculate the a
 
 function calculateCircleArea(radius: number): number {
   
-    let area = Math.PI * (radius ** 2);
+    let area: number = Math.PI * (radius ** 2);
     return area;
 }
 
-export{calculateCircleArea};
+export {calculateCircleArea};

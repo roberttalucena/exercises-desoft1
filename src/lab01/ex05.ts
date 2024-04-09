@@ -5,9 +5,9 @@ Write the function calculateDistance(x1: number, y1: number, x2: number, y2: num
 */
 
 function calculateDistance(x1: number, x2: number, y1: number, y2: number): number {
-    let distance = Math.sqrt( ( (x2 - x1) **2 ) + ((y2 - y1) **2));
+    let distance: number = Math.sqrt( ( (x2 - x1) **2 ) + ((y2 - y1) **2));
     return distance;
 
 }
 
-export{calculateDistance};
+export {calculateDistance};

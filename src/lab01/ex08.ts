@@ -6,9 +6,9 @@ Write the function isTriangle(x1: number, y1: number, x2: number, y2: number, x3
 */
 
 function isTriangle(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number): boolean {
-    let side1 = Math.sqrt( ( (x2 - x1) **2 ) + ((y2 - y1) **2));
-    let side2 = Math.sqrt( ( (x2 - x3) **2 ) + ((y2 - y3) **2));
-    let side3 = Math.sqrt( ( (x3 - x1) **2 ) + ((y3 - y1) **2));
+    let side1: number = Math.sqrt( ( (x2 - x1) **2 ) + ((y2 - y1) **2));
+    let side2: number = Math.sqrt( ( (x2 - x3) **2 ) + ((y2 - y3) **2));
+    let side3: number = Math.sqrt( ( (x3 - x1) **2 ) + ((y3 - y1) **2));
     if (side1 + side2 > side3) {
       if (side2 + side3 > side1) {
         if (side3 + side1 > side2) {

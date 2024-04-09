@@ -6,7 +6,7 @@ n!= (n−1)!∗n ifn>0. Write a function that computes the factorial of a given 
 */
 
 function factorial(n: number): number {
-    let factorial = 1
+    let factorial: number = 1
     for (let i = 1; i <= n; i = i + 1) {
         factorial = factorial * i;
     }

@@ -5,9 +5,9 @@ Write the function calculateHypotenuse(a: number, b: number): number to calculat
 */
 
 function calculateHypotenuse(a: number, b: number): number {
-    let hypotenuse = Math.sqrt((a **2) + (b **2));
+    let hypotenuse: number = Math.sqrt((a **2) + (b **2));
     return hypotenuse;
 
 }
 
-export{calculateHypotenuse};
+export  {calculateHypotenuse};
